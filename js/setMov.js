@@ -66,15 +66,15 @@ function getStyle(obj,name)
 window.onload = function () 
 {
 	
-	var oDiv = document.getElementsByClassName('a-topBar')[0].getElementsByTagName('div');
+	var aDiv = document.getElementsByClassName('a-topBar')[0].getElementsByTagName('div');
 
-	for (var i = 0; i < oDiv.length; i++) 
+	for (var i = 0; i < aDiv.length; i++) 
 	{
-		oDiv[i].parentNode.style.position = 'relative';
-		oDiv[i].ht = parseInt(getStyle(oDiv[i],'height'));
-		oDiv[i].style.top = -oDiv[i].ht-1 + 'px';
+		aDiv[i].parentNode.style.position = 'relative';
+		aDiv[i].ht = parseInt(getStyle(aDiv[i],'height'));
+		aDiv[i].style.top = -aDiv[i].ht-1 + 'px';
 
-		oDiv[i].parentNode.onmouseover = function () 
+		aDiv[i].parentNode.onmouseover = function () 
 		{
 			this.style.height = '21px';
 			this.style.marginTop = '0';
@@ -82,7 +82,7 @@ window.onload = function ()
 			this.style.backgroundColor = '#fff';
 			setMov(this.firstElementChild,{top:30});
 		}
-		oDiv[i].parentNode.onmouseout = function () 
+		aDiv[i].parentNode.onmouseout = function () 
 		{
 			this.style.height = '12px';
 			this.style.marginTop = '9px';
